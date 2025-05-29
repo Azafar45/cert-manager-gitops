@@ -6,8 +6,8 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: file:///gitops-root
-    path: parent-apps/components
+    repoURL: https://github.com/Azafar45/cert-manager-gitops.git
+    path: parent-apps/cert-manager
     targetRevision: HEAD
   destination:
     server: https://kubernetes.default.svc
