@@ -1,0 +1,21 @@
+installCRDs: true
+
+replicaCount: 1
+
+resources:
+  limits:
+    cpu: 200m
+    memory: 256Mi
+  requests:
+    cpu: 100m
+    memory: 128Mi
+
+prometheus:
+  enabled: false
+
+global:
+  leaderElection:
+    namespace: cert-manager
+
+webhook:
+  timeoutSeconds: 10

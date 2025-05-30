@@ -7,12 +7,15 @@ spec:
   project: default
   source:
     repoURL: https://github.com/Azafar45/cert-manager-gitops.git
-    path: components/cert-manager
     targetRevision: HEAD
+    path: utilities/cert-manager
+    helm:
+      valueFiles:
+        - values.yaml
   destination:
     server: https://kubernetes.default.svc
     namespace: cert-manager
   syncPolicy:
     automated:
-      selfHeal: true
       prune: true
+      selfHeal: true
